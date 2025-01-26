@@ -1,5 +1,8 @@
 # ActiveMatter
 We used MATLAB and Python to investigate the motion of active matter modeled by Hexbug robots. The study explores self-alignment in various arenas, the emergence of collective alignment as more Hexbugs are introduced, and the impact of symmetric and asymmetric barriers on their behavior.
+## Errors
+The error estimation in our analysis accounts for Gaussian errors in the determination of particle center points, as particles are identified by fitting circles around them. The radius of these circles serves as the basis for error estimation, and we chose one standard deviation of the radius as the error in both $\Delta$x and $\Delta$y =>  $\Delta$x = $\Delta$y = 1σ f the radius. While this approach might slightly overestimate the errors, further refinement and validation are needed. All additional errors were handled using standard indirect error propagation methods to ensure consistency in the analysis. The error in time was estimated based on the frame rate of the video(fps) Δt=1/fps. 
+fps), with the time error taken as the reciprocal of the frame rate 
 ## find_pixel_zise.m
 This code is applicable for all analyses and is used to define regions or points of interest within a video using pixel-based selection. By manually selecting the top-left and bottom-right corners of the region of interest (ROI), it identifies the area in pixels and allows further calculations for radii or other measurements. Additionally, this process establishes a relationship between pixel dimensions and real-world units, such as centimeters, enabling accurate interpretations and scaling of objects like an arena or other features within the video.
 In this context, the columns represent the X-coordinates, and the rows represent the Y-coordinates, with the region starting from the top-left corner of the frame, designated as the origin (0, 0).
@@ -42,7 +45,7 @@ This code analyzes the movement of obstacles in the presence of Hexbugs by track
 
 
 
-## Errors
+
 
 
 
