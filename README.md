@@ -1,7 +1,7 @@
 # ActiveMatter
 We used MATLAB and Python to investigate the motion of active matter modeled by Hexbug robots. The study explores self-alignment in various arenas, the emergence of collective alignment as more Hexbugs are introduced, and the impact of symmetric and asymmetric barriers on their behavior.
 ## Errors
-The error estimation in our analysis accounts for Gaussian errors in the determination of particle center points, as particles are identified by fitting circles around them. The radius of these circles serves as the basis for error estimation, and we chose one standard deviation of the radius as the error in both $\Delta$x and $\Delta$y =>  $\Delta$x = $\Delta$y = 1σ f the radius. While this approach might slightly overestimate the errors, further refinement and validation are needed. All additional errors were handled using standard indirect error propagation methods to ensure consistency in the analysis. The error in time was estimated based on the frame rate of the video(fps) Δt=1/fps. 
+The error estimation in our analysis accounts for Gaussian errors in the determination of particle center points, as particles are identified by fitting circles around them. The radius of these circles serves as the basis for error estimation, and we chose one standard deviation of the radius as the error in both Δx and Δy =>  Δx = Δy = 1σ f the radius. While this approach might slightly overestimate the errors, further refinement and validation are needed. All additional errors were handled using standard indirect error propagation methods to ensure consistency in the analysis. The error in time was estimated based on the frame rate of the video(fps) Δt=1/fps. 
 fps), with the time error taken as the reciprocal of the frame rate 
 ## find_pixel_zise.m
 This code is applicable for all analyses and is used to define regions or points of interest within a video using pixel-based selection. By manually selecting the top-left and bottom-right corners of the region of interest (ROI), it identifies the area in pixels and allows further calculations for radii or other measurements. Additionally, this process establishes a relationship between pixel dimensions and real-world units, such as centimeters, enabling accurate interpretations and scaling of objects like an arena or other features within the video.
@@ -16,7 +16,9 @@ Note: This green sticker tracking script uses the frame_isolate_green_try2 funct
 ## Heatmap_Position.m
 This code generates a heatmap of particle positions from a CSV file by aggregating their occurrences across frames, which was used in parts 1 and 3 to visualize self-alignment, flocking, and particle gathering under specific conditions.
 # Part 1 - Single Particle
+# MSD_lag_single.m
 ## Oriantential_Coralleation.m
+This code calculates the orientational correlation function C(Δt) over time lags for particles, including error propagation, identifies peaks in C(Δt) and fits an exponential decay model to estimate the rotational diffusion constant D_θ with associated uncertainties.
 
 # Part 2 - Circular Arena - Flocking in a Group of Hexbugs
 In this section, we explore the phenomenon of flocking behavior among active particles, examining how their collective dynamics deviate from randomness. Additionally, we compare these observations with an ideal gas simulation to highlight the unique features of coordinated motion in active systems. This was achieved using the pair correlation function, an excellent statistical tool for analyzing spatial organization and detecting patterns of clustering or uniformity in particle distributions.
