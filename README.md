@@ -17,6 +17,7 @@ Note: This green sticker tracking script uses the frame_isolate_green_try2 funct
 This code generates a heatmap of particle positions from a CSV file by aggregating their occurrences across frames, which was used in parts 1 and 3 to visualize self-alignment, flocking, and particle gathering under specific conditions.
 # Part 1 - Single Particle
 # MSD_lag_single.m
+This code calculates the Mean Squared Displacement (MSD) from particle trajectories and identifies two regimes: ballistic (short time) and diffusive (long time), fitting each to linear models on a log-log scale to estimate slopes and their uncertainties. It also determines the intersection point between the two regimes given tau which provide the rotational diffusion constant D_θ.
 ## Oriantential_Coralleation.m
 This code calculates the orientational correlation function C(Δt) over time lags for particles, including error propagation, identifies peaks in C(Δt) and fits an exponential decay model to estimate the rotational diffusion constant D_θ with associated uncertainties.
 
