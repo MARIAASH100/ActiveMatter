@@ -33,6 +33,7 @@ This script plots the pair correlation functions (PCFs) of Hexbugs and the Ideal
 
 Note: Using consistent file naming conventions like gr_vs_r_14p for Hexbugs and gr_vs_r_ideal_gas14p for the Ideal Gas, with the particle count indicated in the filename => makes life easier and happier ! 
 
+
 # Part 3 - Group of Hexbugs and how Symmetric and Asymmetric Barrier Impact Them
 The reason for studying Hexbugs with symmetric and asymmetric barriers is to observe how particle alignment and collective behavior influence their movement. In a symmetric barrier, the goal is to see if one particle crossing the barrier triggers self-alignment, encouraging others to follow and pass through as a group. However, in an asymmetric barrier, the asymmetry introduces a directional bias, making it more likely for particles to favor one side (typically the left in our setup). This bias disrupts the natural alignment observed in symmetric setups, leading to an uneven particle distribution and unique dynamics across the barrier.
 ## Symmetric Barrier.py
