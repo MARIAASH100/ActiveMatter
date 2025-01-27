@@ -32,8 +32,8 @@ The calculation of g(r) began with extracting particle positions from each frame
 This script plots the pair correlation functions (PCFs) of Hexbugs and the Ideal Gas on the same graph for direct comparison.
 ## Pair Correlation With changing rho.py
 It is noticeable that the initial g(r) of the Hexbugs is significantly smaller. This discrepancy arises because the analysis assumes a fixed number of particles in the system, while some Hexbugs tend to flip and are not counted. As a result, the averaged g(r) frames reflect a lower effective particle count compared to the ideal gas, which consistently maintains the same number of particles in all frames. To address this issue, we used a code normalized by the exact number of particles in each frame, which, as can be seen, produces better results.
-![Hexbugs VS Ideal Gas by "Pair Corralation generate CSV file general.py"](images/11p.png)
-![Hexbugs VS Ideal Gas by " Pair Correlation With changing rho.py"](images/11ppp.png)
+![Hexbugs VS Ideal Gas by "Pair Corralation generate CSV file general.py"](11p.png)
+![Hexbugs VS Ideal Gas by " Pair Correlation With changing rho.py"](11ppp.png)
 
 Note: Using consistent file naming conventions like gr_vs_r_14p for Hexbugs and gr_vs_r_ideal_gas14p for the Ideal Gas, with the particle count indicated in the filename => makes life easier and happier ! 
 
