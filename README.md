@@ -28,11 +28,12 @@ oundary conditions play a crucial role in determining particle behavior. In conf
 ## Pair Corralation generate CSV file general.py
 The calculation of g(r) began with extracting particle positions from each frame of the simulation or experimental data. All pairwise distances between particles were calculated, excluding self-pairs. These distances were binned into a histogram with a bin width of 
 Δr=30 pixels, representing the minimum realistic distance between particles. The histogram was normalized by the total number of particle pairs to create the probability density function (PDF) of distances. This PDF was then normalized by the shell area for each bin to account for the geometry of the system, converting it to the local pair density. Finally, the local pair density was normalized by the system-wide average density to produce the pair correlation function g(r). his process was repeated for all frames, and the final g(r) was obtained by averaging the results over all frames to ensure statistical reliability. This approach capturing the physical behavior of both the ideal gas and Hexbugs systems under consistent conditions.
+![Hexbugs VS Ideal Gas by "Pair Corralation generate CSV file general.py"](11p.png)
 ## Pair Correlation Function Hexbugs vs Ideal Gas.py
 This script plots the pair correlation functions (PCFs) of Hexbugs and the Ideal Gas on the same graph for direct comparison.
 ## Pair Correlation With changing rho.py
 It is noticeable that the initial g(r) of the Hexbugs is significantly smaller. This discrepancy arises because the analysis assumes a fixed number of particles in the system, while some Hexbugs tend to flip and are not counted. As a result, the averaged g(r) frames reflect a lower effective particle count compared to the ideal gas, which consistently maintains the same number of particles in all frames. To address this issue, we used a code normalized by the exact number of particles in each frame, which, as can be seen, produces better results.
-![Hexbugs VS Ideal Gas by "Pair Corralation generate CSV file general.py"](11p.png)
+
 ![Hexbugs VS Ideal Gas by " Pair Correlation With changing rho.py"](11ppp.png)
 
 Note: Using consistent file naming conventions like gr_vs_r_14p for Hexbugs and gr_vs_r_ideal_gas14p for the Ideal Gas, with the particle count indicated in the filename => makes life easier and happier ! 
